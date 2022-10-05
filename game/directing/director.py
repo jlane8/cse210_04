@@ -116,12 +116,13 @@ class Director:
         artifacts = cast.get_actors("artifacts")
         
         # if score is zero, alert player how to change game velocity
-        if self._score == 0:
-            banner.set_text(f"Press up or down arrows to change velocity. Score: {self._score}")
+        self._y = self._velocity.get_y()
+        if self._y == 1:
+            banner.set_text(f"Press up and down arrows to change velocity. Velocity: {self._y} Score: {self._score}")
         
         # show artifact velocity and score
         else:    
-            banner.set_text(f"Velocity: {self._velocity.get_y()} Score: {self._score}")
+            banner.set_text(f"Velocity: {self._y} Score: {self._score}")
         
         # move the robot
         max_x = self._video_service.get_width()
