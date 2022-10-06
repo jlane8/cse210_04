@@ -11,7 +11,7 @@ import random
 from game.shared.point import Point
 
 # set defaults, in case needed
-FRAME_RATE = 12
+FRAME_RATE = 12 
 MAX_X = 900
 MAX_Y = 600
 CELL_SIZE = 15
